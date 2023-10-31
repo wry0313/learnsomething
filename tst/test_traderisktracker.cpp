@@ -3,7 +3,8 @@
 #include <gtest/gtest.h>
 #include <vector>
 
-TEST(TradeRiskTrackerTest, TrackerInit) {
+TEST(TradeRiskTrackerTest, TrackerInit)
+{
     std::vector<Trade> trackedTrades;
     Trade testTrade1(7, true, 1.2);
     Trade testTrade2(7, false, 1.2);
@@ -19,7 +20,8 @@ TEST(TradeRiskTrackerTest, TrackerInit) {
     EXPECT_NEAR(riskTracker.getRisk(), 21.7, 1e-4);
 }
 
-TEST(TradeRiskTrackerTest, TrackerZeroTest) {
+TEST(TradeRiskTrackerTest, TrackerZeroTest)
+{
     std::vector<Trade> trackedTrades;
     RiskTracker riskTracker(0, trackedTrades);
     EXPECT_NEAR(riskTracker.getRisk(), 0, 1e-4);
@@ -27,4 +29,16 @@ TEST(TradeRiskTrackerTest, TrackerZeroTest) {
     riskTracker.addTrade(Trade(44, false, 1.6));
     riskTracker.updateRisk();
     EXPECT_NEAR(riskTracker.getRisk(), 0, 1e-4);
+}
+
+TEST(TradeRiskTrackerTest, TrackerRiskUpdateTest)
+{
+    std::vector<Trade> trackedTrades;
+    RiskTracker riskTracker(0, trackedTrades);
+    EXPECT_NEAR(riskTracker.getRisk(), 0, 1e-4);
+    riskTracker.addTrade(Trade(50, true, 1));
+    riskTracker.updateRisk();
+    EXPECT_NEAR(riskTracker.getRisk(), 50, 1e-4); // check risk
+    riskTracker.updateRisk();
+    EXPECT_NEAR(riskTracker.getRisk(), 50, 1e-4); // check risk
 }
