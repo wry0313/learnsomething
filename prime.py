@@ -19,8 +19,8 @@ def disasterCode():
         factorizations.append([])
         for j in range (0, len(primes)):
             if i % primes[j] == 0:
-                tmp = i / primes[j]
-                factorizations[i] = [primes[j]] + factorizations[int(tmp)]
+                tmp = int(i / primes[j])
+                factorizations[i] = [primes[j]] + factorizations[tmp]
                 print(i, factorizations[i])
                 break
     return factorizations
