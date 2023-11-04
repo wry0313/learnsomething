@@ -1,21 +1,19 @@
 from collections import deque
 
 class Exchange:
-    # implement this!
-    balance = 0
-
     def __init__(self, initialBalance):
-        """Initial Balance is the amount that each account should start with."""
+        self.buy_orders = deque()
+        self.sell_orders = deque()
         self.initialBalance = initialBalance
 
     def add_trade(self, trade):
-        """Adds a trade to the exchange (validation required)
-        and returns a match if required. It is up to you on how you will
-        handle representing trades. """
+        # Validate trade
+        amount = trade['amount']
+        price = trade['price']
 
-        if trade.amount < self.initialBalance:
-            return False
+        if amount > 0:
+            self.buy_orders.append(trade)
+        else:
+            self.sell_orders.append(trade)
 
-        self.balance += trade.amount
-
-        return True
+        return self.match_trades() # api call
