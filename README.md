@@ -1,14 +1,16 @@
 # Part 4: Making things fasterer
 
 ## Scenario
-An intern has made a function to calculate all the unique prime factors for numbers in range of 2 through 1000 as part of their work. However, their code is extrememly slow and has been causing major slippage issues. You, after proving your knowledge through the previous steps are now tasked with optimizing their code.
+An intern has made a function to calculate all the unique prime factors for numbers in range of 2 through 1000 as part 
+of their work. However, their code is extrememly slow and has been causing major slippage issues. You, after proving your
+knowledge through the previous steps are now tasked with optimizing their code.
 
 ## Instructions
-- [ ] OPTIONAL: Run the initial code to see the time.
-- [ ] Optimize the given code to run below .07 seconds for calculating the prime factorization of all numbers from 2-2500, including 2, excluding 2500.
-- [ ] PR this change. 
-- [ ] Write code that runs below .0001 seconds for calculating the prime factorization of all numbers from 2-2500, including 2, excluding 2500.
-- [ ] PR.
+- [x] OPTIONAL: Run the initial code to see the time.
+- [x] Optimize the given code to run below .07 seconds for calculating the prime factorization of all numbers from 2-2500, including 2, excluding 2500.
+- [x] PR this change. 
+- [x] Write code that runs below .0001 seconds for calculating the prime factorization of all numbers from 2-2500, including 2, excluding 2500.
+- [x] PR.
 
 
 ## Questions
