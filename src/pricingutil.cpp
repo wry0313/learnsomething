@@ -10,4 +10,6 @@ float PricingUtil::getVal() {
     return this->val;
 }
 
-PricingUtil::PricingUtil() {}
+PricingUtil::PricingUtil() {
+    this->val = 0;
+}
