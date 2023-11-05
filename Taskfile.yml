@@ -4,12 +4,12 @@ tasks:
   build:
     dir: '{{.USER_WORKING_DIR}}'
     cmds:
-      - cmake ..
+      - cmake .
       - cmake --build .
 
   test:
     dir: '{{.USER_WORKING_DIR}}'
     cmds:
-      - cmake ..
+      - cmake .
       - cmake --build .
       - ./HackathonBotTests

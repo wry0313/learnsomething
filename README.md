@@ -9,8 +9,8 @@ win the competition, and submit proof that you won in your PR. Good Luck!
 ## Ruleset
 - You can only have 1 stock at a time, and cannot short a stock (can't sell without having an explicit stock)
 - Assume the initial stock cost was 100
-- If the stock goes up in price for 52 windows, sell
-- If the stock goes down in price for 47 windows, sell
+- If the stock goes up in price for 52 windows after buy, sell
+- If the stock goes down in price for 47 windows after buy, sell
 - If the stock drops by over 62% from the purchase price bought, sell
 - If the stock raises by over 89% from the purchase price bought, sell
 - If (after buying) the stock raises by >= 20%, drops by <= 15%, raises again by >= 30% and the percent change in the 3 series window is up by >= 50% sell
@@ -20,7 +20,7 @@ win the competition, and submit proof that you won in your PR. Good Luck!
 - If the stock drops in price for 5 windows (after selling), buy
 
 ## Instructions
-- [ ] Use Poetry to get the dependencies of the project. 
+- [x] Use Poetry to get the dependencies of the project. 
 - [ ] Implement a rules based C++ strategy that abides by the given rules! Check this after all tests pass.
 - [ ] Improve the strategy so that you are able to beat the qualifying algorithm!
 - [ ] Create a PR answering the below questions.
