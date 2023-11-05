@@ -1,7 +1,8 @@
 # Part 5: Full Design
 
 ## Scenario
-Implement and exchange. From scratch. It must work with the given `interface.py`, and will be approved by your "manager". You must optimize it for speed - 
+Implement and exchange. From scratch. It must work with the given `interface.py`, and will be approved by your "manager". 
+You must optimize it for speed - 
 if your manager determines the performance is too lacking, you will be asked to improve it. 
 
 ## Instructions
